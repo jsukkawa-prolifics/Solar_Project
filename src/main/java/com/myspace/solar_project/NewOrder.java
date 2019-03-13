@@ -6,12 +6,74 @@ package com.myspace.solar_project;
 
 public class NewOrder implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public NewOrder() {
-    }
+	@org.kie.api.definition.type.Label(value = "Order Id")
+	private java.lang.Long orderId;
+	@org.kie.api.definition.type.Label(value = "Order Type")
+	private java.lang.String orderType;
+	@org.kie.api.definition.type.Label(value = "Applicant Details")
+	private com.myspace.solar_project.Applicant applicantDetails;
+	@org.kie.api.definition.type.Label(value = "Structural Permit")
+	private com.myspace.solar_project.StructuralPermit structuralPermit;
+	@org.kie.api.definition.type.Label(value = "Electric Permit")
+	private com.myspace.solar_project.ElectricPermit electricPermit;
 
+	public NewOrder() {
+	}
 
+	public java.lang.Long getOrderId() {
+		return this.orderId;
+	}
 
+	public void setOrderId(java.lang.Long orderId) {
+		this.orderId = orderId;
+	}
+
+	public java.lang.String getOrderType() {
+		return this.orderType;
+	}
+
+	public void setOrderType(java.lang.String orderType) {
+		this.orderType = orderType;
+	}
+
+	public com.myspace.solar_project.Applicant getApplicantDetails() {
+		return this.applicantDetails;
+	}
+
+	public void setApplicantDetails(
+			com.myspace.solar_project.Applicant applicantDetails) {
+		this.applicantDetails = applicantDetails;
+	}
+
+	public com.myspace.solar_project.StructuralPermit getStructuralPermit() {
+		return this.structuralPermit;
+	}
+
+	public void setStructuralPermit(
+			com.myspace.solar_project.StructuralPermit structuralPermit) {
+		this.structuralPermit = structuralPermit;
+	}
+
+	public com.myspace.solar_project.ElectricPermit getElectricPermit() {
+		return this.electricPermit;
+	}
+
+	public void setElectricPermit(
+			com.myspace.solar_project.ElectricPermit electricPermit) {
+		this.electricPermit = electricPermit;
+	}
+
+	public NewOrder(java.lang.Long orderId, java.lang.String orderType,
+			com.myspace.solar_project.Applicant applicantDetails,
+			com.myspace.solar_project.StructuralPermit structuralPermit,
+			com.myspace.solar_project.ElectricPermit electricPermit) {
+		this.orderId = orderId;
+		this.orderType = orderType;
+		this.applicantDetails = applicantDetails;
+		this.structuralPermit = structuralPermit;
+		this.electricPermit = electricPermit;
+	}
 
 }
