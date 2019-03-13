@@ -8,16 +8,19 @@ public class NewOrder implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Order Id")
+	@org.kie.api.definition.type.Label("Order Id")
 	private java.lang.Long orderId;
-	@org.kie.api.definition.type.Label(value = "Order Type")
+	@org.kie.api.definition.type.Label("Order Type")
 	private java.lang.String orderType;
-	@org.kie.api.definition.type.Label(value = "Applicant Details")
+	@org.kie.api.definition.type.Label("Applicant Details")
 	private com.myspace.solar_project.Applicant applicantDetails;
-	@org.kie.api.definition.type.Label(value = "Structural Permit")
+	@org.kie.api.definition.type.Label("Structural Permit")
 	private com.myspace.solar_project.StructuralPermit structuralPermit;
-	@org.kie.api.definition.type.Label(value = "Electric Permit")
+	@org.kie.api.definition.type.Label("Electric Permit")
 	private com.myspace.solar_project.ElectricPermit electricPermit;
+
+	@org.kie.api.definition.type.Label(value = "HOA Approval")
+	private java.lang.Boolean hoaApproval;
 
 	public NewOrder() {
 	}
@@ -65,15 +68,25 @@ public class NewOrder implements java.io.Serializable {
 		this.electricPermit = electricPermit;
 	}
 
+	public java.lang.Boolean getHoaApproval() {
+		return this.hoaApproval;
+	}
+
+	public void setHoaApproval(java.lang.Boolean hoaApproval) {
+		this.hoaApproval = hoaApproval;
+	}
+
 	public NewOrder(java.lang.Long orderId, java.lang.String orderType,
 			com.myspace.solar_project.Applicant applicantDetails,
 			com.myspace.solar_project.StructuralPermit structuralPermit,
-			com.myspace.solar_project.ElectricPermit electricPermit) {
+			com.myspace.solar_project.ElectricPermit electricPermit,
+			java.lang.Boolean hoaApproval) {
 		this.orderId = orderId;
 		this.orderType = orderType;
 		this.applicantDetails = applicantDetails;
 		this.structuralPermit = structuralPermit;
 		this.electricPermit = electricPermit;
+		this.hoaApproval = hoaApproval;
 	}
 
 }
