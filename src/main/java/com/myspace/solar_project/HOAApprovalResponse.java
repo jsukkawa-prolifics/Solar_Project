@@ -6,12 +6,24 @@ package com.myspace.solar_project;
 
 public class HOAApprovalResponse implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public HOAApprovalResponse() {
-    }
+	@org.kie.api.definition.type.Label(value = "Is Approval Required")
+	private java.lang.Boolean isApprovalRequired;
 
+	public HOAApprovalResponse() {
+	}
 
+	public java.lang.Boolean getIsApprovalRequired() {
+		return this.isApprovalRequired;
+	}
 
+	public void setIsApprovalRequired(java.lang.Boolean isApprovalRequired) {
+		this.isApprovalRequired = isApprovalRequired;
+	}
+
+	public HOAApprovalResponse(java.lang.Boolean isApprovalRequired) {
+		this.isApprovalRequired = isApprovalRequired;
+	}
 
 }
