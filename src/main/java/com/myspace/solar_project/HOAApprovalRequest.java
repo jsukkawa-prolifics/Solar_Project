@@ -6,12 +6,47 @@ package com.myspace.solar_project;
 
 public class HOAApprovalRequest implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public HOAApprovalRequest() {
-    }
+	@org.kie.api.definition.type.Label(value = "Home Address")
+	private java.lang.String address;
+	@org.kie.api.definition.type.Label(value = "Home Plot Number")
+	private java.lang.Long plotNumber;
+	@org.kie.api.definition.type.Label(value = "Order Type")
+	private java.lang.String orderType;
 
+	public HOAApprovalRequest() {
+	}
 
+	public java.lang.String getAddress() {
+		return this.address;
+	}
 
+	public void setAddress(java.lang.String address) {
+		this.address = address;
+	}
+
+	public java.lang.Long getPlotNumber() {
+		return this.plotNumber;
+	}
+
+	public void setPlotNumber(java.lang.Long plotNumber) {
+		this.plotNumber = plotNumber;
+	}
+
+	public java.lang.String getOrderType() {
+		return this.orderType;
+	}
+
+	public void setOrderType(java.lang.String orderType) {
+		this.orderType = orderType;
+	}
+
+	public HOAApprovalRequest(java.lang.String address,
+			java.lang.Long plotNumber, java.lang.String orderType) {
+		this.address = address;
+		this.plotNumber = plotNumber;
+		this.orderType = orderType;
+	}
 
 }
