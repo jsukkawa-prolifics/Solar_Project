@@ -8,8 +8,11 @@ public class StructurePermitResponse implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Permit Status")
+	@org.kie.api.definition.type.Label("Permit Status")
 	private java.lang.String status;
+
+	@org.kie.api.definition.type.Label(value = "Permit Id")
+	private java.lang.Long id;
 
 	public StructurePermitResponse() {
 	}
@@ -22,8 +25,17 @@ public class StructurePermitResponse implements java.io.Serializable {
 		this.status = status;
 	}
 
-	public StructurePermitResponse(java.lang.String status) {
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public StructurePermitResponse(java.lang.String status, java.lang.Long id) {
 		this.status = status;
+		this.id = id;
 	}
 
 }
