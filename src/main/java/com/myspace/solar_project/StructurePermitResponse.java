@@ -6,12 +6,24 @@ package com.myspace.solar_project;
 
 public class StructurePermitResponse implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public StructurePermitResponse() {
-    }
+	@org.kie.api.definition.type.Label(value = "Permit Status")
+	private java.lang.String status;
 
+	public StructurePermitResponse() {
+	}
 
+	public java.lang.String getStatus() {
+		return this.status;
+	}
 
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
+	public StructurePermitResponse(java.lang.String status) {
+		this.status = status;
+	}
 
 }
