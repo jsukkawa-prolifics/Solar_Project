@@ -6,12 +6,70 @@ package com.myspace.solar_project;
 
 public class StructurePermitRequest implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public StructurePermitRequest() {
-    }
+	@org.kie.api.definition.type.Label(value = "Order Id")
+	private java.lang.Long orderId;
+	@org.kie.api.definition.type.Label(value = "Order Type")
+	private java.lang.String orderType;
+	@org.kie.api.definition.type.Label(value = "Applicant Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Applicant Address")
+	private java.lang.String address;
+	@org.kie.api.definition.type.Label(value = "Plot Number")
+	private java.lang.Long plot;
 
+	public StructurePermitRequest() {
+	}
 
+	public java.lang.Long getOrderId() {
+		return this.orderId;
+	}
 
+	public void setOrderId(java.lang.Long orderId) {
+		this.orderId = orderId;
+	}
+
+	public java.lang.String getOrderType() {
+		return this.orderType;
+	}
+
+	public void setOrderType(java.lang.String orderType) {
+		this.orderType = orderType;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(java.lang.String address) {
+		this.address = address;
+	}
+
+	public java.lang.Long getPlot() {
+		return this.plot;
+	}
+
+	public void setPlot(java.lang.Long plot) {
+		this.plot = plot;
+	}
+
+	public StructurePermitRequest(java.lang.Long orderId,
+			java.lang.String orderType, java.lang.String name,
+			java.lang.String address, java.lang.Long plot) {
+		this.orderId = orderId;
+		this.orderType = orderType;
+		this.name = name;
+		this.address = address;
+		this.plot = plot;
+	}
 
 }
