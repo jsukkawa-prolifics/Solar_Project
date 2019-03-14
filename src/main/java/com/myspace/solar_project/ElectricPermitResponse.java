@@ -11,8 +11,8 @@ public class ElectricPermitResponse implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Status")
 	private java.lang.String status;
 
-	@org.kie.api.definition.type.Label(value = "Electric Permit Id")
-	private java.lang.Long id;
+	@org.kie.api.definition.type.Label("Electric Permit Id")
+	private String id;
 
 	public ElectricPermitResponse() {
 	}
@@ -25,15 +25,15 @@ public class ElectricPermitResponse implements java.io.Serializable {
 		this.status = status;
 	}
 
-	public java.lang.Long getId() {
+	public java.lang.String getId() {
 		return this.id;
 	}
 
-	public void setId(java.lang.Long id) {
+	public void setId(java.lang.String id) {
 		this.id = id;
 	}
 
-	public ElectricPermitResponse(java.lang.String status, java.lang.Long id) {
+	public ElectricPermitResponse(java.lang.String status, java.lang.String id) {
 		this.status = status;
 		this.id = id;
 	}
